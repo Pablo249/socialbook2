@@ -9,14 +9,10 @@ import './navBar/navBar.html';
 import './viewProfile/viewProfile.html';
 import './addProfile/addProfile.html';
 import './profiles/profiles.html';
-<<<<<<< HEAD
-import './profiles/profile.js';
-=======
 import './profiles/profiles.js';
->>>>>>> 0c2761fa851f83ac2ff8de05485699d3d5e4d482
 import './confirmDel/confirmDel.html';
 import './confirmDel/confirmDel.js';
-import { faMeteor } from '@fortawesome/free-solid-svg-icons';
+//import { faMeteor } from '@fortawesome/free-solid-svg-icons';
 
 Template.nav.events({
   'click .js-add'() {
@@ -36,7 +32,8 @@ Template.main.events({
       socialdb.insert({
         "picPath": pic,
         "fname": fname,
-        "createdOn": new Date().getTime()
+        "createdOn": new Date().getTime(),
+        "pOwn": Meteor.userId
       });
       $("#addModal").modal("hide");
     }
@@ -64,8 +61,7 @@ Template.main.events({
 
 let validateAddForm = (fn, ln) => {
   let valid = true;
-  $("#bootstrap template
-  ").removeClass("errorBox");
+  $("#bootstrap template ").removeClass("errorBox");
   $("#lastN").removeClass("errorBox");
 
   if (!fn) {
@@ -79,10 +75,6 @@ let validateAddForm = (fn, ln) => {
   return valid;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 0c2761fa851f83ac2ff8de05485699d3d5e4d482
 
 /*
 profile picture

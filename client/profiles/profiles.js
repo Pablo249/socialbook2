@@ -1,4 +1,5 @@
 import { faMeteor } from "@fortawesome/free-solid-svg-icons";
+import { Meteor } from 'meteor/meteor';
 
 Template.profile.events({
     'click .js-rate'(event) {
